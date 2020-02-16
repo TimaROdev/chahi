@@ -1,0 +1,65 @@
+.Checkerboard_view {
+    background: #333333;
+    height: min(100vw, calc(100vh));
+    width: min(100vw, calc(100vh));
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, calc(100% / 8));
+
+}
+
+@keyframes App-logo-spin {
+    from {
+        height: calc(100% - 0px);
+        width: calc(100% - 0px);}
+    50%  {border: 3px solid green;
+        height: calc(100% - 6px);
+        width: calc(100% - 6px);} /* ignored */
+    to   {border: 0px solid green;
+        height: calc(100% - 0px);
+        width: calc(100% - 0px);}
+
+
+}@keyframes App-logo-spin {
+    from {border: 0px solid red;
+        height: calc(100% - 0px);
+        width: calc(100% - 0px);}
+    50%  {border: 2px solid red;
+        height: calc(100% - 4px);
+        width: calc(100% - 4px);} /* ignored */
+    to   {border: 0px solid red;
+        height: calc(100% - 0px);
+        width: calc(100% - 0px);}
+
+
+}
+.item1.selected{
+    animation: App-logo-spin infinite 0.5s linear;
+    border-color: green;
+
+}
+.row_div{
+    height: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(8, calc(100% / 8));
+    grid-template-rows: 1fr;
+}
+.wrapper {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas:
+            ". . ."
+            ". a ."
+            ". . .";
+}
+.item1 {
+    grid-area: a;
+    align-self: center;
+    justify-self: center;
+    border-radius: 50%;
+
+}
+
